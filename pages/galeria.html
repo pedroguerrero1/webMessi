@@ -3,32 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería</title>
-  <link rel="stylesheet" href="../estilos.css">
+  <title>Lionel Messi - Galería</title>
+  <!-- Bootstrap CSS solo para componentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Nuestro CSS -->
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
-  <header class="encabezado">
-    <h1 class="titulo-principal">Galería</h1>
-    <nav class="navegacion">
-      <ul class="menu">
-        <li><a class="enlace" href="../index.html">Inicio</a></li>
-        <li><a class="enlace" href="biografia.html">Biografía</a></li>
-        <li><a class="enlace" href="logros.html">Logros</a></li>
-      </ul>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Lionel Messi</h1>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="biografia.html">Biografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="logros.html">Logros</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="contenido-principal">
-    <section class="seccion-galeria">
-      <h2 class="subtitulo">Imágenes</h2>
-      <p class="parrafo">En esta sección se verán fotos o momentos importantes.</p>
+    <section class="carousel-galeria">
+      <h2 class="text-center mt-3">Galería de imágenes</h2>
+
+      <!-- Carousel Bootstrap -->
+      <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/messi1.jpg" class="d-block w-100" alt="Messi 1">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/messi2.jpg" class="d-block w-100" alt="Messi 2">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/messi3.jpg" class="d-block w-100" alt="Messi 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Grid de imágenes adicional -->
+    <section class="grid-galeria mt-4">
+      <div class="grid-imagenes">
+        <img src="../images/messi4.jpg" alt="Messi 4">
+        <img src="../images/messi5.jpg" alt="Messi 5">
+        <img src="../images/messi6.jpg" alt="Messi 6">
+        <img src="../images/messi7.jpg" alt="Messi 7">
+      </div>
     </section>
   </main>
 
-  <footer class="pie">
-    <p class="texto-footer">&copy; 2025 - Sitio web de Lionel Messi</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Sitio dedicado a Lionel Messi</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

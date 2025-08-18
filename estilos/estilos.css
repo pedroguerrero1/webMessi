@@ -69,3 +69,29 @@ body {
     padding-right: 20px;
   }
 }
+
+/* Grid de imágenes para galería */
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.grid-imagenes img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Ajustes del carousel */
+.carousel img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Media query para mobile */
+@media (max-width: 768px) {
+  .carousel img {
+    max-height: 250px;
+  }
+}
