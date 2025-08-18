@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lionel Messi - Biografía</title>
-  <!-- Bootstrap CSS solo para navbar -->
+  <title>Biografía de Messi</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Nuestro CSS -->
   <link rel="stylesheet" href="../css/estilos.css">
+
+
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <h1>Lionel Messi</h1>
-
-    <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <header class="bg-dark text-white p-3">
+    <h1 class="text-center">Biografía de Lionel Messi</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">Inicio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menú">
@@ -33,37 +30,42 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
-  <main class="contenido-principal">
-    <section class="biografia">
-      <div class="texto">
-        <h2>Primeros años</h2>
-        <p class="parrafo">
-          Lionel Messi nació en Rosario, Argentina, en 1987. Desde pequeño mostró un talento excepcional para el fútbol.
-        </p>
-
-        <h2>Barcelona</h2>
-        <p class="parrafo">
-          A los 13 años se mudó a España para unirse a la cantera del FC Barcelona. Allí desarrolló toda su carrera profesional hasta 2021.
-        </p>
-
-        <h2>PSG e Inter Miami</h2>
-        <p class="parrafo">
-          Tras dejar Barcelona, Messi jugó en el PSG y luego continuó su carrera en Inter Miami, dejando una huella imborrable en el fútbol mundial.
-        </p>
+  <main class="container my-4">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Infancia y comienzos</h2>
+        <p>Messi nació en Rosario, Argentina, en 1987. Desde pequeño mostró gran talento futbolístico.</p>
       </div>
-      <div class="imagen">
-        <img src="../images/messi1.jpg" alt="Messi joven">
+      <div class="col-md-6">
+        <img src="../images/messi1.jpg" alt="Messi de niño" class="img-fluid rounded">
       </div>
-    </section>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6 order-md-2">
+        <h2>Trayectoria en Barcelona</h2>
+        <p>A los 13 años se unió a la cantera del FC Barcelona y se convirtió en uno de los mejores jugadores de la historia.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="../images/messi2.jpg" alt="Messi en Barcelona" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Selección Argentina</h2>
+        <p>Con Argentina es BICAMPEÓN de la Copa América (2021 y 2024) y CAMPEÓN del Mundo 2022 en Qatar.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="../images/messi3.jpg" alt="Messi con Argentina" class="img-fluid rounded">
+      </div>
+    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Sitio dedicado a Lionel Messi</p>
+  <footer class="bg-dark text-white text-center p-3">
+    <p>Pedro Guerrero</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
