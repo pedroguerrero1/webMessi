@@ -73,6 +73,17 @@ header h1 {
   color: white;
 }
 
+header h1, footer p {
+  transition: all 0.4s ease; /* suaviza la animación */
+  cursor: pointer; /* opcional, da sensación de interactivo */
+}
+
+header h1:hover, footer p:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* gradiente celeste-azul */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* texto se pinta con gradiente */
+}
+
 /* ===========================
    MAIN
 =========================== */
@@ -230,7 +241,8 @@ footer {
 
 .biografia-row .biografia-imagen img {
   width: 100%;
-  height: 50%;
+  max-height: 520px;
+  height: auto;
   border-radius: 5px;
   border: 2px solid var(--color-celeste);
 }
@@ -252,7 +264,11 @@ footer {
   }
 }
 
+/* Animación en imágenes de biografía */
+.biografia-row .biografia-imagen img {
+  transition: transform 0.3s ease; /* transición suave */
+}
 
-
-
-
+.biografia-row .biografia-imagen img:hover {
+  transform: scale(1.05); /* zoom al pasar el mouse */
+}
