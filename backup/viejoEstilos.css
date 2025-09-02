@@ -40,6 +40,8 @@ header {
 
 header h1 {
   margin: 0;
+  transition: all 0.4s ease; /* suaviza la animación */
+  cursor: pointer; /* da sensación de interactivo */
 }
 
 .navbar {
@@ -54,6 +56,7 @@ header h1 {
   color: var(--color-celeste);
   font-weight: bold;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .menu {
@@ -67,21 +70,29 @@ header h1 {
 .menu li a {
   color: var(--color-celeste);
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .menu li a:hover {
   color: white;
 }
 
-header h1, footer p {
-  transition: all 0.4s ease; /* suaviza la animación */
-  cursor: pointer; /* opcional, da sensación de interactivo */
+/* Línea animada con gradiente */
+.menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: width 0.3s ease;
 }
 
-header h1:hover, footer p:hover {
-  background: linear-gradient(90deg, #00c6ff, #0072ff); /* gradiente celeste-azul */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* texto se pinta con gradiente */
+.menu li a:hover::after {
+  width: 100%;
 }
 
 /* ===========================
@@ -270,5 +281,5 @@ footer {
 }
 
 .biografia-row .biografia-imagen img:hover {
-  transform: scale(1.05); /* zoom al pasar el mouse */
+  transform: scale(1.03); /* zoom al pasar el mouse */
 }

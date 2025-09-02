@@ -1,0 +1,157 @@
+header {
+  background-color: #000000;
+  color: #3db4bd;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+header h1:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 15px 20px;
+}
+header .navbar .logo {
+  color: #3db4bd;
+  font-weight: bold;
+  font-size: 20px;
+}
+header .navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+header .navbar .menu li a {
+  color: #3db4bd;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+header .navbar .menu li a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .navbar .menu li a {
+    display: block;
+    padding: 8px 0;
+  }
+}
+.biografia-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.biografia-row .biografia-texto,
+.biografia-row .biografia-imagen {
+  flex: 1;
+}
+.biografia-row .biografia-imagen img {
+  width: 100%;
+  max-height: 520px;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #3db4bd;
+}
+
+@media (max-width: 768px) {
+  .biografia-row {
+    flex-direction: column;
+  }
+  .biografia-row .biografia-texto,
+  .biografia-row .biografia-imagen {
+    flex: 1 1 100%;
+  }
+  .biografia-row .biografia-imagen img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  background-color: #111111;
+}
+@media (max-width: 768px) {
+  .carousel img {
+    max-height: 300px;
+  }
+}
+
+.grid-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.grid-imagenes img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #3db4bd;
+}
+
+footer {
+  background-color: #000000;
+  color: #3db4bd;
+  padding: 15px;
+  text-align: center;
+}
+footer p {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+footer p:hover {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body a {
+  color: #3db4bd;
+  text-decoration: none;
+}
+body a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  color: #3db4bd;
+  margin-top: 0;
+}
+
+p {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=estilos2.css.map */

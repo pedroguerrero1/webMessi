@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'mixins';
+
+footer {
+  background-color: $color-negro;
+  color: $color-celeste;
+  padding: 15px;
+  text-align: center;
+
+  p {
+    @include transicion-suave(all);
+    cursor: pointer;
+
+    &:hover {
+      @include gradiente-texto(linear-gradient(90deg, #00c6ff, #0072ff));
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+  background-color: $color-negro;
+  color: $color-celeste;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    @include transicion-suave(all);
+    cursor: pointer;
+
+    &:hover {
+      @include gradiente-texto(linear-gradient(90deg, #00c6ff, #0072ff));
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-negro;
+    padding: 15px 20px;
+
+    .logo {
+      color: $color-celeste;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+
+      li a {
+        color: $color-celeste;
+        font-weight: bold;
+        @include transicion-suave(color);
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVO: Navbar apilado en móvil
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      li a {
+        display: block;
+        padding: 8px 0;
+      }
+    }
+  }
+}

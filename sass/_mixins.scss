@@ -1,0 +1,12 @@
+// ===========================
+// MIXINS
+// ===========================
+@mixin transicion-suave($propiedades...) {
+  transition: $propiedades 0.4s ease;
+}
+
+@mixin gradiente-texto($gradiente) {
+  background: $gradiente;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
