@@ -7,19 +7,33 @@
   align-items: flex-start;
   margin-bottom: 20px;
 
-  .biografia-texto,
-  .biografia-imagen {
-    flex: 1; // 50% cada uno
-  }
-
-  .biografia-imagen img {
-    width: 100%;
-    max-height: 520px;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid $color-celeste;
-  }
+  /* Agregado para evitar scroll horizontal */
+  max-width: 100%;
+  overflow: hidden;
 }
+
+.biografia-row .biografia-texto,
+.biografia-row .biografia-imagen {
+  flex: 1; /* cada uno ocupa 50% del ancho */
+  min-width: 0; /* importante para que flex items no se desborden */
+}
+
+.biografia-row .biografia-imagen img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  border-radius: 5px;
+  border: 2px solid var(--color-celeste);
+  display: block;
+  transition: transform 0.3s ease; // animación suave
+}
+
+.biografia-row .biografia-imagen img:hover {
+  transform: scale(1.05); // zoom del 5%
+}
+
+
+
 
 // RESPONSIVO: apilar en móvil
 @media (max-width: 768px) {

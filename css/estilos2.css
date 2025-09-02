@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background-color: #000000;
   color: #3db4bd;
@@ -64,17 +65,29 @@ header .navbar .menu li a:hover {
   gap: 20px;
   align-items: flex-start;
   margin-bottom: 20px;
+  /* Agregado para evitar scroll horizontal */
+  max-width: 100%;
+  overflow: hidden;
 }
+
 .biografia-row .biografia-texto,
 .biografia-row .biografia-imagen {
-  flex: 1;
+  flex: 1; /* cada uno ocupa 50% del ancho */
+  min-width: 0; /* importante para que flex items no se desborden */
 }
+
 .biografia-row .biografia-imagen img {
   width: 100%;
-  max-height: 520px;
   height: auto;
+  max-height: 520px;
   border-radius: 5px;
-  border: 2px solid #3db4bd;
+  border: 2px solid var(--color-celeste);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.biografia-row .biografia-imagen img:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -152,6 +165,21 @@ h2 {
 
 p {
   color: #ffffff;
+}
+
+/* ===========================
+   IMÁGENES
+=========================== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #3db4bd;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=estilos2.css.map */

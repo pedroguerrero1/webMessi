@@ -34,3 +34,18 @@ h2 {
 p {
   color: $color-texto;
 }
+
+/* ===========================
+   IMÁGENES
+=========================== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid $color-celeste; // usando variable Sass
+  transition: transform 0.3s ease; // para animación hover
+}
+
+img:hover {
+  transform: scale(1.05); // mini zoom al pasar el mouse
+}
