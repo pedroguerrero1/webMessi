@@ -1,4 +1,3 @@
-// Importamos todos los partials
 @import 'variables';
 @import 'mixins';
 @import 'header';
@@ -6,9 +5,7 @@
 @import 'galeria';
 @import 'footer';
 
-// ===========================
 // ESTILOS GENERALES
-// ===========================
 body {
   background-color: $color-fondo;
   color: $color-texto;
@@ -35,17 +32,62 @@ p {
   color: $color-texto;
 }
 
-/* ===========================
-   IMÁGENES
-=========================== */
+/* IMÁGENES */
 img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  border: 2px solid $color-celeste; // usando variable Sass
-  transition: transform 0.3s ease; // para animación hover
+  border: 2px solid $color-celeste;
+  transition: transform 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.05); // mini zoom al pasar el mouse
+  transform: scale(1.05);
+}
+
+.seccion-presentacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 70vh;
+  padding: 40px 20px;
+
+  .texto {
+    flex: 1;
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.6;
+    }
+  }
+
+  .imagen {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      border: 2px solid $color-celeste;
+      display: block;
+    }
+  }
+}
+
+// Responsivo tablet y mobile
+@media (max-width: 1024px) {
+  .seccion-presentacion {
+    flex-direction: column;
+    text-align: center;
+
+    .imagen {
+      margin-top: 20px;
+    }
+  }
 }

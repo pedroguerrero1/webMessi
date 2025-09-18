@@ -4,7 +4,7 @@
 footer {
   background-color: $color-negro;
   color: $color-celeste;
-  padding: 15px;
+  padding: 20px 15px;
   text-align: center;
 
   p {
@@ -14,5 +14,27 @@ footer {
     &:hover {
       @include gradiente-texto(linear-gradient(90deg, #00c6ff, #0072ff));
     }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) { // mobile
+  footer {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) { // tablet
+  footer {
+    padding: 25px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) { // desktop
+  footer {
+    padding: 30px 25px;
+    font-size: 1.1rem;
   }
 }

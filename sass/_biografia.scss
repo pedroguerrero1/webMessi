@@ -6,48 +6,72 @@
   gap: 20px;
   align-items: flex-start;
   margin-bottom: 20px;
-
-  /* Agregado para evitar scroll horizontal */
   max-width: 100%;
   overflow: hidden;
 }
 
 .biografia-row .biografia-texto,
 .biografia-row .biografia-imagen {
-  flex: 1; /* cada uno ocupa 50% del ancho */
-  min-width: 0; /* importante para que flex items no se desborden */
+  flex: 1;
+  min-width: 0;
 }
 
 .biografia-row .biografia-imagen img {
   width: 100%;
   height: auto;
-  max-height: 520px;
   border-radius: 5px;
-  border: 2px solid var(--color-celeste);
+  border: 2px solid $color-celeste;
   display: block;
-  transition: transform 0.3s ease; // animación suave
+  transition: transform 0.3s ease;
+}
+
+// Solo en desktop limitamos la altura
+@media (min-width: 769px) {
+  .biografia-row .biografia-imagen img {
+    max-height: 520px;
+  }
 }
 
 .biografia-row .biografia-imagen img:hover {
-  transform: scale(1.05); // zoom del 5%
+  transform: scale(1.05);
 }
 
+// Tipografía fluida
+.biografia-texto h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
 
+.biografia-texto p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
 
-
-// RESPONSIVO: apilar en móvil
-@media (max-width: 768px) {
+// RESPONSIVO
+@media (max-width: 1024px) { // tablet
   .biografia-row {
     flex-direction: column;
+  }
+  .biografia-row .biografia-texto,
+  .biografia-row .biografia-imagen {
+    flex: 1 1 100%;
+  }
+  .biografia-row .biografia-imagen img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: none;
+  }
+}
 
-    .biografia-texto,
-    .biografia-imagen {
-      flex: 1 1 100%;
-    }
-
-    .biografia-imagen img {
-      max-width: 100%;
-      margin-bottom: 10px;
-    }
+@media (max-width: 768px) { // móvil
+  .biografia-row {
+    flex-direction: column;
+  }
+  .biografia-row .biografia-texto,
+  .biografia-row .biografia-imagen {
+    flex: 1 1 100%;
+  }
+  .biografia-row .biografia-imagen img {
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 }
